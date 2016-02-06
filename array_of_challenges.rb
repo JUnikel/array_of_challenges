@@ -1,10 +1,14 @@
 #Line up Alphabetically 
-	#Sort all the names in this array alphabetically
 	star_students = [ "Tara", "Rahul", "Liza", "Charlie", "Remy", "Dean", "Reis", "Holden", "Andrew"]
 
-puts star_students[2]
+	star_students.sort!
+	#cputs star_students
+
 	#create a new array that has 19 elements of only your name as a string
 		#(hint: There is a way do this with only typing the string once)
+		Jax = []
+		Jax << "Jackson " * 19
+		#puts Jax
 
 
 	#That first array, star_students and this array, brilliant_students, should be one big array!
@@ -12,6 +16,9 @@ puts star_students[2]
 		#Then sort the final array in alphabetic order
 
 	brilliant_students = ["James", "Annika", "Ned", "Alden", "Daniel", "Ben", "Luke", "Jackson"]
+	All_students = brilliant_students + star_students
+	#brilliant_students.sort!
+	#puts brilliant_students
 
 	
 	#BONUS
@@ -20,3 +27,9 @@ puts star_students[2]
 
 			adjectives = ["adventurous", "ambitious", "brave", "bright", "charming", "courageous", "creative", "determined", "dynamic", "diplomatic", "enthusiastic", "helpful", "honest", "humorous", "inventive", "persistent", "powerful", "reliable", "resourceful", "sincere", "thoughtful", "witty"]
 
+			adj_count = 0
+				All_students.each do |name|
+					puts "#{adjectives[adj_count]}" + " #{name}"
+					adj_count = adj_count + 1
+				end
+	
